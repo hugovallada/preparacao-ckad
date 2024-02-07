@@ -1,0 +1,12 @@
+apiVersion: v1 # versão da api, consegue separar os objetos por versão
+kind: Pod # O objeto que vocÇe vai utilizar
+metadata: # Metadados do POD, labels, atributos e nome do objeto
+  name: meupod
+spec: #  Especificação do objeto. O que terá: containers e etc...
+  containers:
+    - name: web
+      image: kubedevio/web-color:blue
+      ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
